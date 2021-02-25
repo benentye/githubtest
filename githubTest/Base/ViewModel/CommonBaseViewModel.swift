@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 protocol CommonBaseViewModelDelegate: class {
-    func updateResult(_ data: NSDictionary)
+    func updateResult(_ firstOrnot:Bool,_ data: NSDictionary)
     
 }
 public class CommonBaseViewModel{
@@ -37,11 +37,8 @@ public class CommonBaseViewModel{
                     let  data =   response.result.value as! NSDictionary
 //                    print(data)
                     
-                    if firstOrnot
-                    {
-                        self.delegate?.updateResult(data)
-                    }
-                    
+                    self.delegate?.updateResult(firstOrnot,data)
+
                 }else{
                     print("Post 请求失败：\(response.error ?? "" as! Error)")
                 }
