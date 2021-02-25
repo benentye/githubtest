@@ -29,6 +29,7 @@ class ViewController: UIViewController,CommonBaseViewModelDelegate {
         viewModel.delegate = self
         
         initViews()
+        addData()
         print("first apiGithub count:\(Date())")
 
         self.perform(#selector(apiGithub), with: nil, afterDelay: delayCount)
@@ -44,6 +45,8 @@ class ViewController: UIViewController,CommonBaseViewModelDelegate {
         resultTime.text = "调用结果时间:\(Date())"
         resultTitleTxt.text = "调用结果"
         resultTxt.text = "\(data)"
+        
+        saveData(data)
         
         ///首次
         if firstOrNot
@@ -73,6 +76,7 @@ class ViewController: UIViewController,CommonBaseViewModelDelegate {
         historyBtn.setTitleColor(.white, for: .normal)
         historyBtn.setTitle("调用历史", for: .normal)
         self.view.addSubview(historyBtn)
+        historyBtn.addTarget(self, action: #selector(historyVc), for: .touchUpInside)
 
         scrollerView.snp.makeConstraints { (make) in
             make.top.equalTo(100)
@@ -107,6 +111,28 @@ class ViewController: UIViewController,CommonBaseViewModelDelegate {
 
         }
     }
+    @objc  func historyVc(_ sender: UIButton) {
+        let vc = HistoryViewController.init()
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    func saveData(_ result:NSDictionary)
+    {
+        CoreDataManager.shared.saveRequestlistWith(result)
 
+    }
+    
+    func addData()
+    {
+        let tmpData =  CoreDataManager.shared.getTopNewResult()
+        updateRequestListData(tmpData)
+    }
+    
+    func updateRequestListData(_ data: RequestList)
+    {
+        resultTime.text = "调用结果时间:\(data.result_time!)"
+        resultTitleTxt.text = "调用结果"
+        resultTxt.text = "\(data.result_txt!)"
+    }
 }
 

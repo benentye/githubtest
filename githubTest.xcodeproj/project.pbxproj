@@ -13,6 +13,10 @@
 		5CCEEA0625E7957E00AD6D0F /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCEEA0525E7957E00AD6D0F /* BaseModel.swift */; };
 		5CCEEA0825E7A39200AD6D0F /* CommonBaseNetWorkServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCEEA0725E7A39200AD6D0F /* CommonBaseNetWorkServices.swift */; };
 		5CCEEA0D25E7A3FA00AD6D0F /* CommonBaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCEEA0C25E7A3FA00AD6D0F /* CommonBaseViewModel.swift */; };
+		5CCEEA1125E7BFB100AD6D0F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCEEA1025E7BFB100AD6D0F /* CoreDataManager.swift */; };
+		5CCEEA1325E7C6AE00AD6D0F /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCEEA1225E7C6AE00AD6D0F /* HistoryViewController.swift */; };
+		5CCEEA1525E7C9D600AD6D0F /* historyListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCEEA1425E7C9D600AD6D0F /* historyListCell.swift */; };
+		5CCEEA1725E7C9F100AD6D0F /* historyListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CCEEA1625E7C9F100AD6D0F /* historyListCell.xib */; };
 		5CD910E925E5269C009389F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD910E825E5269C009389F7 /* AppDelegate.swift */; };
 		5CD910EB25E5269C009389F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD910EA25E5269C009389F7 /* ViewController.swift */; };
 		5CD910EE25E5269C009389F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CD910EC25E5269C009389F7 /* Main.storyboard */; };
@@ -49,6 +53,10 @@
 		5CCEEA0525E7957E00AD6D0F /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		5CCEEA0725E7A39200AD6D0F /* CommonBaseNetWorkServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonBaseNetWorkServices.swift; sourceTree = "<group>"; };
 		5CCEEA0C25E7A3FA00AD6D0F /* CommonBaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonBaseViewModel.swift; sourceTree = "<group>"; };
+		5CCEEA1025E7BFB100AD6D0F /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		5CCEEA1225E7C6AE00AD6D0F /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		5CCEEA1425E7C9D600AD6D0F /* historyListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = historyListCell.swift; sourceTree = "<group>"; };
+		5CCEEA1625E7C9F100AD6D0F /* historyListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = historyListCell.xib; sourceTree = "<group>"; };
 		5CD910E525E5269C009389F7 /* githubTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = githubTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CD910E825E5269C009389F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5CD910EA25E5269C009389F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +117,7 @@
 				5CCEEA0425E7956600AD6D0F /* Model */,
 				5CCEE9FD25E7940E00AD6D0F /* Api */,
 				5CCEEA0225E794A700AD6D0F /* config.swift */,
+				5CCEEA1025E7BFB100AD6D0F /* CoreDataManager.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -167,6 +176,9 @@
 				5CCEE9FC25E7906C00AD6D0F /* Base */,
 				5CD910E825E5269C009389F7 /* AppDelegate.swift */,
 				5CD910EA25E5269C009389F7 /* ViewController.swift */,
+				5CCEEA1225E7C6AE00AD6D0F /* HistoryViewController.swift */,
+				5CCEEA1425E7C9D600AD6D0F /* historyListCell.swift */,
+				5CCEEA1625E7C9F100AD6D0F /* historyListCell.xib */,
 				5CD910EC25E5269C009389F7 /* Main.storyboard */,
 				5CD910F225E5269D009389F7 /* Assets.xcassets */,
 				5CD910F425E5269D009389F7 /* LaunchScreen.storyboard */,
@@ -310,6 +322,7 @@
 			files = (
 				5CD910F625E5269D009389F7 /* LaunchScreen.storyboard in Resources */,
 				5CD910F325E5269D009389F7 /* Assets.xcassets in Resources */,
+				5CCEEA1725E7C9F100AD6D0F /* historyListCell.xib in Resources */,
 				5CD910EE25E5269C009389F7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -382,9 +395,12 @@
 				5CD910F125E5269C009389F7 /* githubTest.xcdatamodeld in Sources */,
 				5CCEEA0625E7957E00AD6D0F /* BaseModel.swift in Sources */,
 				5CD910E925E5269C009389F7 /* AppDelegate.swift in Sources */,
+				5CCEEA1325E7C6AE00AD6D0F /* HistoryViewController.swift in Sources */,
+				5CCEEA1525E7C9D600AD6D0F /* historyListCell.swift in Sources */,
 				5CCEEA0825E7A39200AD6D0F /* CommonBaseNetWorkServices.swift in Sources */,
 				5CCEEA0325E794A700AD6D0F /* config.swift in Sources */,
 				5CCEE9FF25E7943D00AD6D0F /* CommonBaseNetWorkBase.swift in Sources */,
+				5CCEEA1125E7BFB100AD6D0F /* CoreDataManager.swift in Sources */,
 				5CCEEA0125E7948800AD6D0F /* Protocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
