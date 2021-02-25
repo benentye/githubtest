@@ -1,0 +1,18 @@
+platform :ios, '11.0'
+
+target 'githubTest' do
+  use_frameworks!
+  pod 'SnapKit'
+  pod 'Alamofire'
+  pod 'RxDataSources', '~> 3.0'
+  pod 'ObjectMapper', '~> 3.5'
+  pod 'CLToast'
+  pod 'Moya/RxSwift'
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'Moya-ObjectMapper/RxSwift'
+  pod 'NSObject+Rx' 
+  pod 'SVProgressHUD'
+  pod 'MJRefresh'
+end
+
