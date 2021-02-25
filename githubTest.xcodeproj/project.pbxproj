@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5CCEE9FF25E7943D00AD6D0F /* CommonBaseNetWorkBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCEE9FE25E7943D00AD6D0F /* CommonBaseNetWorkBase.swift */; };
+		5CCEEA0125E7948800AD6D0F /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCEEA0025E7948800AD6D0F /* Protocol.swift */; };
+		5CCEEA0325E794A700AD6D0F /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCEEA0225E794A700AD6D0F /* config.swift */; };
+		5CCEEA0625E7957E00AD6D0F /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCEEA0525E7957E00AD6D0F /* BaseModel.swift */; };
+		5CCEEA0825E7A39200AD6D0F /* CommonBaseNetWorkServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCEEA0725E7A39200AD6D0F /* CommonBaseNetWorkServices.swift */; };
+		5CCEEA0D25E7A3FA00AD6D0F /* CommonBaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCEEA0C25E7A3FA00AD6D0F /* CommonBaseViewModel.swift */; };
 		5CD910E925E5269C009389F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD910E825E5269C009389F7 /* AppDelegate.swift */; };
 		5CD910EB25E5269C009389F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD910EA25E5269C009389F7 /* ViewController.swift */; };
 		5CD910EE25E5269C009389F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CD910EC25E5269C009389F7 /* Main.storyboard */; };
@@ -37,6 +43,12 @@
 
 /* Begin PBXFileReference section */
 		077E7464B16C3902B4D3BF62 /* Pods-githubTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-githubTest.debug.xcconfig"; path = "Target Support Files/Pods-githubTest/Pods-githubTest.debug.xcconfig"; sourceTree = "<group>"; };
+		5CCEE9FE25E7943D00AD6D0F /* CommonBaseNetWorkBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonBaseNetWorkBase.swift; sourceTree = "<group>"; };
+		5CCEEA0025E7948800AD6D0F /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
+		5CCEEA0225E794A700AD6D0F /* config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = config.swift; sourceTree = "<group>"; };
+		5CCEEA0525E7957E00AD6D0F /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		5CCEEA0725E7A39200AD6D0F /* CommonBaseNetWorkServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonBaseNetWorkServices.swift; sourceTree = "<group>"; };
+		5CCEEA0C25E7A3FA00AD6D0F /* CommonBaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonBaseViewModel.swift; sourceTree = "<group>"; };
 		5CD910E525E5269C009389F7 /* githubTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = githubTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CD910E825E5269C009389F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5CD910EA25E5269C009389F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -90,11 +102,41 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		5CCEE9FC25E7906C00AD6D0F /* New Group */ = {
+		5CCEE9FC25E7906C00AD6D0F /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				5CCEEA0B25E7A3E500AD6D0F /* ViewModel */,
+				5CCEEA0425E7956600AD6D0F /* Model */,
+				5CCEE9FD25E7940E00AD6D0F /* Api */,
+				5CCEEA0225E794A700AD6D0F /* config.swift */,
 			);
-			path = "New Group";
+			path = Base;
+			sourceTree = "<group>";
+		};
+		5CCEE9FD25E7940E00AD6D0F /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				5CCEE9FE25E7943D00AD6D0F /* CommonBaseNetWorkBase.swift */,
+				5CCEEA0025E7948800AD6D0F /* Protocol.swift */,
+				5CCEEA0725E7A39200AD6D0F /* CommonBaseNetWorkServices.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		5CCEEA0425E7956600AD6D0F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5CCEEA0525E7957E00AD6D0F /* BaseModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5CCEEA0B25E7A3E500AD6D0F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5CCEEA0C25E7A3FA00AD6D0F /* CommonBaseViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		5CD910DC25E5269B009389F7 = {
@@ -122,7 +164,7 @@
 		5CD910E725E5269C009389F7 /* githubTest */ = {
 			isa = PBXGroup;
 			children = (
-				5CCEE9FC25E7906C00AD6D0F /* New Group */,
+				5CCEE9FC25E7906C00AD6D0F /* Base */,
 				5CD910E825E5269C009389F7 /* AppDelegate.swift */,
 				5CD910EA25E5269C009389F7 /* ViewController.swift */,
 				5CD910EC25E5269C009389F7 /* Main.storyboard */,
@@ -336,8 +378,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CD910EB25E5269C009389F7 /* ViewController.swift in Sources */,
+				5CCEEA0D25E7A3FA00AD6D0F /* CommonBaseViewModel.swift in Sources */,
 				5CD910F125E5269C009389F7 /* githubTest.xcdatamodeld in Sources */,
+				5CCEEA0625E7957E00AD6D0F /* BaseModel.swift in Sources */,
 				5CD910E925E5269C009389F7 /* AppDelegate.swift in Sources */,
+				5CCEEA0825E7A39200AD6D0F /* CommonBaseNetWorkServices.swift in Sources */,
+				5CCEEA0325E794A700AD6D0F /* config.swift in Sources */,
+				5CCEE9FF25E7943D00AD6D0F /* CommonBaseNetWorkBase.swift in Sources */,
+				5CCEEA0125E7948800AD6D0F /* Protocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
